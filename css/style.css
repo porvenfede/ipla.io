@@ -1,0 +1,570 @@
+/* --- Variables y Paleta de Colores (Institucional) --- */
+:root {
+    --primary: #1f4e79; /* Azul Marino Institucional */
+    --secondary: #ff9900; /* Naranja/Amarillo para Alerta y Acentos */
+    --accent-red: #cc0000; /* Rojo para Denuncias/Alerta */
+    --text-dark: #333333;
+    --text-light: #f4f4f4;
+    --background-light: #ffffff;
+    --background-grey: #f0f4f8;
+}
+
+/* --- Base y Tipografía --- */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-light);
+    color: var(--text-dark);
+    line-height: 1.6;
+}
+
+h1, h2, h3 {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--primary);
+    letter-spacing: 0.5px;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px 0;
+}
+
+a {
+    color: var(--primary);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--secondary);
+}
+
+/* --- Navegación (NAV) --- */
+nav {
+    background-color: var(--primary); 
+    padding: 10px 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+nav .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+nav .logo a {
+    color: var(--text-light);
+    font-size: 2.2em;
+    font-weight: 800;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: var(--text-light);
+    font-weight: 400;
+    padding: 5px 0;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: var(--secondary);
+}
+
+/* --- Header / Hero --- */
+header {
+    background: linear-gradient(rgba(31, 78, 121, 0.85), rgba(31, 78, 121, 0.85)), url('https://via.placeholder.com/1500x400/1f4e79/ffffff?text=Fondo+Institucional+IPLA') no-repeat center center/cover;
+    color: var(--background-light);
+    padding: 80px 0;
+    text-align: center;
+}
+
+header h1 {
+    color: var(--text-light);
+    font-size: 3.5em;
+    margin-bottom: 10px;
+}
+header p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+/* Botón de Denuncia (Destacado) */
+.btn-denuncia {
+    display: inline-block;
+    background-color: var(--accent-red); 
+    color: var(--text-light); 
+    padding: 15px 30px;
+    border-radius: 5px;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    border: 2px solid var(--text-light);
+}
+
+.btn-denuncia:hover {
+    background-color: #ff0000;
+    text-decoration: none;
+}
+
+.btn-secondary {
+    display: inline-block;
+    background-color: var(--secondary);
+    color: var(--primary);
+    padding: 8px 15px;
+    border-radius: 5px;
+    font-weight: 700;
+    font-size: 0.9em;
+    margin-top: 10px;
+}
+
+.btn-secondary:hover {
+    background-color: #ffb84d;
+}
+
+.link-more {
+    display: block;
+    margin-top: 15px;
+    font-weight: 700;
+    font-size: 0.9em;
+    color: var(--primary);
+}
+
+/* --- Secciones Generales --- */
+.section-padded {
+    padding: 60px 0;
+    border-bottom: 1px solid var(--background-grey);
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+/* Grilla de Información (Servicios Rápidos) */
+.info-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+.info-item {
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.item-gestion {
+    background-color: var(--background-grey);
+}
+
+.item-contacto {
+    background-color: var(--primary);
+    color: var(--text-light);
+}
+
+.item-contacto h3 {
+    color: var(--secondary);
+    margin-top: 0;
+}
+.item-contacto a {
+    color: var(--text-light);
+    text-decoration: underline;
+}
+.phone-number {
+    font-size: 1.5em;
+    font-weight: 700;
+    margin: 10px 0;
+    color: var(--secondary);
+}
+
+/* Grilla de Programas (Index) */
+.programas-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    text-align: center;
+}
+.programa-card {
+    background-color: var(--background-light);
+    border: 1px solid var(--background-grey);
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1); /* Sombra más fuerte para destacar */
+    transition: transform 0.3s ease; /* Efecto al pasar el mouse */
+}
+.programa-card:hover {
+    transform: translateY(-5px); /* Se levanta un poco al pasar el mouse */
+}
+.programa-card h3 {
+    color: var(--secondary); /* Color Naranja llamativo */
+    margin-top: 0;
+    font-size: 1.6em; /* Un poco más grande */
+    letter-spacing: 1px;
+}
+.programa-card p {
+    font-size: 1.05em; /* Ligeramente más grande el texto */
+}
+
+
+/* --- Estilos para Institucional --- */
+
+.grid-2-cols-inst {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.mision-vision-card {
+    background-color: var(--background-grey);
+    padding: 25px;
+    border-left: 5px solid var(--secondary);
+    border-radius: 4px;
+}
+
+/* Grilla de Funcionamiento (4 columnas) */
+.funcionamiento-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    text-align: center;
+}
+
+.paso-item {
+    padding: 20px;
+    border: 1px solid var(--background-grey);
+    border-radius: 8px;
+}
+
+.paso-item .icono {
+    display: inline-block;
+    background-color: var(--primary);
+    color: var(--text-light);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    font-size: 1.5em;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+
+
+/* --- Estilos para Programas Sociales --- */
+
+.programa-feature {
+    margin-bottom: 60px;
+    padding: 30px;
+    border-radius: 8px;
+    background-color: var(--background-grey);
+    border-left: 5px solid var(--primary);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08); /* Sombra para resaltar el bloque */
+}
+
+.programa-feature h3 {
+    color: var(--primary); 
+    font-size: 1.8em; /* Título mucho más grande */
+    font-weight: 800; /* Extra-negrita */
+    padding-bottom: 15px;
+    margin-top: 0;
+    margin-bottom: 25px; /* Espacio después del título */
+    /* Agregamos una barra secundaria debajo del título */
+    border-bottom: 3px solid var(--secondary); 
+    display: inline-block; /* Para que la línea solo cubra el texto */
+}
+
+.feature-content {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 30px;
+    align-items: start;
+}
+.feature-content.reverse-order {
+    direction: rtl;
+}
+.feature-content.reverse-order > * {
+    direction: ltr;
+}
+
+
+.feature-content ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    border-left: 3px solid var(--secondary);
+    padding-left: 15px;
+    font-size: 0.95em;
+    font-weight: 700;
+}
+
+.feature-content li {
+    margin-bottom: 8px;
+}
+
+
+/* --- Estilos para Contacto --- */
+
+/* Nota: Se usa .contacto-grid-new en el HTML modificado */
+.contacto-grid-new {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 40px;
+}
+
+.contacto-info {
+    padding: 20px;
+    background-color: var(--primary);
+    color: var(--text-light);
+    border-radius: 8px;
+}
+.contacto-info h3 {
+    color: var(--secondary);
+}
+.contact-item {
+    margin-bottom: 25px;
+    border-bottom: 1px dashed rgba(255, 255, 255, 0.3);
+    padding-bottom: 15px;
+}
+.contact-item h4 {
+    color: var(--text-light);
+    font-size: 1.2em;
+    margin-top: 0;
+}
+.contact-item a {
+    color: var(--text-light);
+    font-weight: 700;
+}
+.btn-denuncia-small {
+    display: inline-block;
+    background-color: var(--accent-red);
+    color: var(--text-light);
+    padding: 8px 15px;
+    border-radius: 5px;
+    font-weight: 700;
+    font-size: 0.9em;
+    margin-top: 10px;
+}
+
+/* Estilos de Enlaces Útiles */
+.enlaces-utiles {
+    padding: 20px;
+    background-color: var(--background-grey);
+    border-radius: 8px;
+}
+
+.enlaces-utiles h3 {
+    border-bottom: 2px solid var(--secondary);
+    padding-bottom: 10px;
+}
+
+.link-util {
+    display: block;
+    background-color: var(--background-light);
+    color: var(--primary);
+    padding: 15px 20px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    font-weight: 700;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+    border: 1px solid #ccc;
+    text-decoration: none;
+}
+
+.link-util:hover {
+    background-color: var(--secondary);
+    color: var(--text-dark);
+    border-color: var(--secondary);
+}
+
+.link-accent {
+    /* Destaca un enlace importante */
+    border-left: 5px solid var(--secondary);
+}
+
+
+/* --- Footer --- */
+footer {
+    background-color: var(--text-dark);
+    color: var(--text-light);
+    text-align: center;
+    padding: 30px 0;
+    font-size: 0.9em;
+}
+
+
+/* ========================================= */
+/* --- RESPONSIVE DESIGN (Media Queries) --- */
+/* ========================================= */
+
+/* Tablet y Móviles (Máximo 800px) */
+@media (max-width: 800px) {
+    
+    .container {
+        padding: 10px 0;
+    }
+    
+    /* 1. Navegación Vertical */
+    nav .container {
+        flex-direction: column; 
+        padding: 10px 20px;
+    }
+    
+    nav .logo {
+        margin-bottom: 10px;
+    }
+
+    nav ul {
+        flex-direction: column; 
+        width: 100%;
+        text-align: center;
+    }
+    nav ul li {
+        margin: 5px 0;
+    }
+    nav ul li a {
+        display: block;
+        padding: 8px 0;
+    }
+    
+    /* 2. Header y Botón */
+    header {
+        padding: 50px 0;
+    }
+    header h1 {
+        font-size: 2.8em;
+    }
+    .btn-denuncia {
+        padding: 12px 20px;
+        font-size: 0.9em;
+    }
+
+    /* 3. Grillas (se apilan) */
+    .info-grid {
+        grid-template-columns: 1fr; 
+    }
+    .grid-2-cols-inst {
+        grid-template-columns: 1fr;
+    }
+    .feature-content {
+        grid-template-columns: 1fr;
+    }
+    .feature-content.reverse-order {
+        direction: ltr; 
+    }
+    /* Se asegura que la grilla de 4 pasos se apile */
+    .funcionamiento-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    /* Usa la clase de contacto actualizada */
+    .contacto-grid-new {
+        grid-template-columns: 1fr;
+    }
+    .contacto-info {
+        background-color: var(--background-grey);
+        color: var(--text-dark);
+    }
+    .contacto-info h3 {
+        color: var(--primary);
+    }
+    .contact-item {
+        border-bottom: 1px dashed rgba(0, 0, 0, 0.2);
+    }
+    .contact-item a {
+        color: var(--primary);
+    }
+}
+
+/* Móviles Pequeños (Máximo 500px) */
+@media (max-width: 500px) {
+    header h1 {
+        font-size: 2em;
+    }
+    .section-padded {
+        padding: 40px 0;
+    }
+}
+/* ============================================= */
+/* --- ESTILOS PARA LA SECCIÓN DE CRÉDITOS --- */
+/* ============================================= */
+.creditos-background {
+    background-color: var(--primary); /* Fondo azul oscuro principal */
+    color: #fff;
+    text-align: center;
+}
+
+.creditos-background h2.title-light {
+    color: var(--secondary); /* Título en color amarillo/naranja */
+    margin-bottom: 25px;
+}
+
+.creditos-background p.text-light {
+    font-size: 1.1em;
+    max-width: 800px;
+    margin: 0 auto 30px auto;
+}
+
+.credit-names-grid {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+}
+
+.name-tag {
+    background-color: var(--secondary); /* Fondo amarillo/naranja para las tarjetas */
+    color: var(--primary); /* Texto oscuro */
+    padding: 15px 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    width: 200px; /* Ancho fijo para control */
+}
+
+.name-tag .role {
+    display: block;
+    font-size: 0.9em;
+    font-weight: 400;
+    margin-bottom: 5px;
+    color: #494949;
+}
+
+.name-tag strong {
+    font-size: 1.2em;
+}
+
+.final-note {
+    font-style: italic;
+    opacity: 0.8;
+}
+
+/* Adaptabilidad Móvil */
+@media (max-width: 700px) {
+    .credit-names-grid {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+    .name-tag {
+        width: 90%; /* Ancho completo en móvil */
+        max-width: 300px;
+    }
+}
